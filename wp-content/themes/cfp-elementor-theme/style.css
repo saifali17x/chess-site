@@ -1,0 +1,56 @@
+/*
+Theme Name: CFP Elementor Theme
+Description: Custom WordPress theme for Chess Federation of Pakistan with Elementor Pro integration
+Version: 1.0.0
+Author: CFP Development Team
+Text Domain: cfp-elementor-theme
+Requires at least: 5.0
+Tested up to: 6.8
+Requires PHP: 7.4
+*/
+
+/* Import existing CSS */
+@import url("assets/css/styles.css");
+
+/* WordPress-specific overrides */
+.wp-block-button__link {
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  padding: calc(0.667em + 2px) calc(1.333em + 2px);
+  font-size: 1.125em;
+  transition: var(--transition);
+}
+
+.wp-block-button__link:hover {
+  background-color: var(--secondary-color);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Elementor compatibility */
+.elementor-widget-container {
+  margin-bottom: 0;
+}
+
+.elementor-section {
+  padding: 0;
+}
+
+.elementor-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+/* WordPress admin bar adjustment */
+.admin-bar .header {
+  top: 32px;
+}
+
+@media (max-width: 782px) {
+  .admin-bar .header {
+    top: 46px;
+  }
+}
